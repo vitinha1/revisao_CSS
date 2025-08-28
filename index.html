@@ -1,14 +1,105 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>projeto-3bimestre</title>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <div id="page"> 
+        <header>
+            <strong>O CSS</strong>
+            <h1>CASCATA,ESPECIFICIDADE E COMBINADORES</h1>
+            <img src="./revisao_CSS/html-x-css-afinal-quais-sao-as-diferencas_1b35feb55a5e269746bc6bc148337033.webp" alt="imagem do css">
+        </header>
+
+        <div class="divider"></div>
+
+        <main>
+            <section class="1-propriedade">
+           <h2>A Regra da Cascata</h2>
+                <p>Quando existem múltiplas regras de estilo para o mesmo elemento, o navegador precisa decidir qual delas aplicar.
+                    Essa decisão segue a Regra da Cascata, que considera três critérios principais:
+                    
+                    1. Origem e importância
+                    
+                    Estilos do navegador (default) → menos importantes
+                    
+                    Estilos do desenvolvedor (no CSS) → prioridade normal
+                    
+                    Estilos com !important → prioridade máxima.</p>
+
+                    <p>Se duas regras tiverem a mesma importância e especificidade, vale a última lida pelo navegador (de baixo para cima no CSS).</p>
+
+                    <p>A Regra da Cascata no CSS segue esta ordem de prioridade:
+
+                        !important
+                        
+                        Especificidade do seletor (inline > id > classe > tag)
+                        
+                        Ordem no código (última regra ganha)</p>
+            </section>
+
+            <section class="2-propriedade">
+                <h2>Especificidade no CSS</h2>
+                    <p>A especificidade no CSS é o sistema de “pontuação” que o navegador usa para decidir qual regra aplicar quando várias regras competem pelo mesmo elemento.</p>
+
+                        <h3>Como funciona a especificidade?</h3>
+                        
+                        <p>Cada tipo de seletor recebe um peso. Quanto mais específico o seletor, maior a chance dele “ganhar” na disputa.
+                        
+                        Pontuação básica:
+                        
+                        Inline (style="...") → 1000 pontos
+                        
+                        ID (#menu) → 100 pontos
+                        
+                        Classe, atributo, pseudo-classe (.btn, [type="text"], :hover) → 10 pontos
+                        
+                        Elemento e pseudo-elemento (div, p, ::before) → 1 ponto
+                        
+                        Universal (*) → 0 pontos</p>
+            </section>
+
+            <section class="3-propriedade">
+                <h2>Combinação de Seletores</h2>
+                    <p></p>
+            </section>
+
+            <section class="4-propriedade">
+                <h2>Pseudo-classes Estruturais</h2>
+                    <p></p>
+            </section>
+
+            <section class="5-propriedade">
+                <h2>Compreendendo o Display</h2>
+                    <p></p>
+            </section>
+
+            <section class="6-propriedade">
+                <h2>Elementos Inline e Block</h2>
+                    <p></p>
+            </section>
+
+            <section class="7-propriedade">
+                <h2>Espaçamento com Box Model</h2>
+
+                    <h3>Margin</h3>
+                        <p></p>
+
+                    <h3>Padding</h3>
+                        <p></p>
+
+                    <h3>Border</h3>
+                        <p></p>
+            </section>
+
+            <section class="8-propriedade">
+                <h2></h2>
+                    <p></p>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
