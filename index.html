@@ -64,35 +64,240 @@
 
             <section class="3-propriedade">
                 <h2>Combinação de Seletores</h2>
-                    <p></p>
+                    <p>combinação de seletores no CSS permite que você escreva regras mais precisas e específicas, aplicando estilos apenas quando certas condições de relação entre elementos forem atendidas.
+
+                        Existem 5 tipos principais de combinadores no CSS:
+                        
+                        <h3>1. Descendente (espaço)</h3>
+                        
+                        Seleciona elementos dentro de outro.
+                        
+                        <p>
+                            div p {
+                          color: blue;
+                        }
+                    </p>
+                        
+                        
+                        Afeta todos os p> que estão dentro de um div>, em qualquer nível.
+                        
+                        <h3>2. Filho direto (>)</h3>
+                        
+                        Seleciona apenas o filho imediato.
+                        
+                        <p>
+                            div > p {
+                          color: red;
+                        }
+                    </p>
+                        
+                        
+                        Afeta só os <p> que são filhos diretos do div>, e não os netos.
+                        
+                        <h3>3. Irmão adjacente (+)</h3>
+                        
+                        Seleciona o elemento logo após outro.
+                       <p> 
+                        h1 + p {
+                          color: green;
+                        }
+                    </p>
+                        
+                        
+                         Afeta o p> que vem imediatamente depois de um h1>
+                        
+                        <h3>4. Irmãos gerais (~)</h3>
+                        
+                        Seleciona todos os irmãos seguintes.
+                        <p>
+                        h1 ~ p {
+                          color: orange;
+                        }</p>
+                        
+                        
+                         Afeta todos os p> que estão depois de um h1>, no mesmo nível.
+                        
+                         <h3>5. Agrupamento de seletores (,)</h3>
+                        
+                        Aplica o mesmo estilo a múltiplos seletores.
+                        <p>
+                        h1, h2, h3 {
+                          color: purple;
+                        }
+                    </p>
+                        
+                        Afeta todos os títulos h1, h2 e h3.
+                        
+                         Exemplo prático
+                        <p>div></p>
+                          <p>h1>Título</h1></p>
+                         <p> p>Parágrafo 1 </p></p>
+                         <p> p>Parágrafo 2</p></p>
+                        <p>/div></p>
+                        
+                        div p { color: blue; }  todos os p> dentro do div */
+                        div > p { font-weight: bold; } /* apenas filhos diretos */
+                        h1 + p { font-style: italic; } /* apenas o 1º <p> após o h1 */</p>
             </section>
 
             <section class="4-propriedade">
                 <h2>Pseudo-classes Estruturais</h2>
-                    <p></p>
+                    <p>Principais Pseudo-classes Estruturais
+
+                       <p> :first-child
+                        Seleciona o primeiro filho de um elemento pai.
+                        Exemplo: o primeiro parágrafo dentro de uma seção.</p>
+                        
+                        <p>:last-child
+                        Seleciona o último filho de um elemento pai.
+                        Exemplo: o último item de uma lista.</p>
+                        
+                        <p>:nth-child(n)
+                        Seleciona o n-ésimo filho de um elemento pai.
+                        Exemplo: todo segundo ou terceiro item de uma lista.</p>
+                        
+                        <p>:nth-last-child(n)
+                        Seleciona o n-ésimo filho contando de trás para frente.
+                        Exemplo: penúltimo item de uma lista.</p>
+                        
+                        <p>:only-child
+                        Seleciona o único filho de um elemento pai.
+                        Exemplo: um parágrafo que é o único dentro de uma div.</p>
+                        
+                        <p>:first-of-type
+                        Seleciona o primeiro elemento de um tipo específico entre os irmãos.
+                        Exemplo: o primeiro parágrafo dentro de uma seção, mesmo que haja outros tipos de elementos antes.</p>
+                        
+                        <p>:last-of-type
+                        Seleciona o último elemento de um tipo específico entre os irmãos.</p>
+                        
+                        <p>:nth-of-type(n)
+                        Seleciona o n-ésimo elemento de um tipo específico.
+                        Exemplo: o terceiro parágrafo, ignorando outros tipos de elementos.</p>
+                        
+                        <p>:nth-last-of-type(n)
+                        Seleciona o n-ésimo elemento de um tipo específico contando de trás para frente.</p>
+                        
+                        <p>:only-of-type
+                        Seleciona o único elemento de um tipo específico entre os irmãos.</p>
             </section>
 
             <section class="5-propriedade">
                 <h2>Compreendendo o Display</h2>
-                    <p></p>
+                    <p>A propriedade display define como um elemento é exibido na página e como ele interage com outros elementos ao redor.
+
+                        Ela determina se o elemento:
+                        
+                        Ocupa uma linha inteira ou apenas o espaço necessário.
+                        
+                        Pode ter largura e altura definidas.
+                        
+                        Fica lado a lado de outros elementos ou em linha.</p>
+
+                        <h3>>Principais valores de display</h3>
+
+                        <p> 
+                            block (bloco)
+                            
+                            O elemento ocupa toda a largura disponível.
+                            
+                            Sempre começa em uma nova linha.
+                            
+                            Ex.: div>, h1>, p> (por padrão).
+                            
+                            inline (linha)
+                            
+                            O elemento ocupa apenas o espaço necessário para seu conteúdo.
+                            
+                            Não quebra linha; fica lado a lado de outros elementos.
+                            
+                            Ex.: span>, a>, strong> (por padrão).
+                            
+                            inline-block
+                            
+                            Combina características de inline e block:
+                            
+                            Fica lado a lado de outros elementos (como inline).
+                            
+                            Permite definir largura e altura (como block).
+                            
+                            none
+                            
+                            O elemento não é exibido na página.
+                            
+                            Não ocupa espaço algum.
+                            
+                            flex
+                            
+                            Define um container flexível que organiza seus filhos de forma dinâmica.
+                            
+                            Facilita alinhamento e distribuição de espaço.
+                            
+                            grid
+                            
+                            Define um container em grade para posicionar os elementos em linhas e colunas.
+                        </p>
             </section>
 
             <section class="6-propriedade">
                 <h2>Elementos Inline e Block</h2>
-                    <p></p>
+                    <p>Elementos Block (bloco)
+
+Ocupam toda a largura disponível da linha.
+
+Sempre começam em uma nova linha.
+
+Podemos definir largura e altura.
+
+Ex.: div>, p>, h1>, section>
+
+<h3>Características principais:</h3>
+
+<p>Criam “blocos” visíveis na página.
+
+Usados para organizar seções e conteúdos maiores.</p>
+<p>
+    <h3>Elementos Inline (linha)</h3>
+
+<p>Ocupam apenas o espaço necessário para o conteúdo.
+    
+    Não quebram a linha; ficam lado a lado de outros elementos.
+    
+    Não podemos definir largura e altura diretamente.
+    
+    Ex.: span>, a>, strong>, em> </p>
+    
+    <h3>Características principais:</h3>
+    
+    <p>Servem para formatar trechos de texto ou pequenos elementos dentro de blocos.
+    
+    Usados para detalhes ou partes internas do conteúdo.</p>
+
             </section>
 
             <section class="7-propriedade">
                 <h2>Espaçamento com Box Model</h2>
 
                     <h3>Margin</h3>
-                        <p></p>
+                        <p>spaço externo: não afeta o conteúdo nem o tamanho interno da caixa.
+
+                            Pode ser individual ou geral: você pode definir margens para cima, baixo, esquerda e direita separadamente.
+                            
+                            Valores possíveis: pode ser em pixels (px), porcentagem (%), em, ou auto (útil para centralizar elementos horizontalmente).</p>
 
                     <h3>Padding</h3>
-                        <p></p>
+                        <p>Espaço interno: afasta o conteúdo da borda da caixa, sem afetar os elementos externos.
+
+                            Pode ser individual ou geral: você pode definir padding para cima, baixo, esquerda e direita separadamente.
+                            
+                            Valores possíveis: pixels (px), porcentagem (%), em ou rem.</p>
 
                     <h3>Border</h3>
-                        <p></p>
+                        <p>Fica entre o padding e a margin: envolve o conteúdo e o espaço interno (padding) da caixa, mas está dentro da margem.
+
+                            Pode ter estilo, cor e espessura: você pode definir se é sólida, tracejada, pontilhada, dupla, etc.
+                            
+                            Pode ser aplicada de forma geral ou em lados específicos: topo, direita, inferior ou esquerda.</p>
             </section>
 
             <section class="8-propriedade">
